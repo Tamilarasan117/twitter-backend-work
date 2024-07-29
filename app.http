@@ -1,0 +1,60 @@
+### 1.Register API
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+### 2.Login API
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+### 3.Returns the latest tweets of people whom the user follows API
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 4.GET the list of all names of people whom the user follows API
+GET http://localhost:3000/user/following/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 5.GET the list of all names of people who follows the user API
+GET http://localhost:3000/user/followers/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 6.GET If the user requests a tweet of the user he is following, return the tweet, likes count, replies count and date-time API
+GET http://localhost:3000/tweets/1/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 7.GET If the user requests a tweet of a user he is following, return the list of usernames who liked the tweet API
+GET http://localhost:3000/tweets/2/likes/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 8.GET If the user requests a tweet of a user he is following, return the list of replies API
+GET http://localhost:3000/tweets/1/replies/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 9.GET a list of all tweets of the user API
+GET http://localhost:3000/user/tweets/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+
+### 10.Add a tweet API
+POST http://localhost:3000/user/tweets/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
+Content-Type: application/json
+
+{
+  "tweet": "The Mornings..."
+}
+
+### 11.Delete User Tweet API
+DELETE http://localhost:3000/tweets/2/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoiSm9lIEJpZGVuIiwidXNlcm5hbWUiOiJKb2VCaWRlbiIsInBhc3N3b3JkIjoiJDJiJDEwJDJhcmU2QmE2OW9pL0NhaTRhVC9WTS50N0FPN1RzUXgvLk9nei43WEc0cWp1TWlsMHY4MGFxIiwiZ2VuZGVyIjoibWFsZSIsImlhdCI6MTcyMjIzNzAxM30.QDXnTtZ6Y3fnwIfzi0_xkQq2b1Ab0BPRixqme0N6YZI
